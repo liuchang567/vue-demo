@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
-    <div @click="test" >跳转啊啊啊啊</div>
+    <div @click="get" >跳转啊啊啊啊</div>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     },
     // 接口请求
     get () {
-      Api.getUserList.then(res => {
+      Api.getUserList().then(res => {
         console.log(res)
       })
     }
